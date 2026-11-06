@@ -16,7 +16,6 @@
         h1 {
             color: #00ff00; 
         }
-        /* 这是按钮的样式 */
         #lang-btn {
             background-color: #333333;
             color: #00ff00;
@@ -40,46 +39,51 @@
     <!-- 中文内容区域 -->
     <div id="chinese-content">
         <h1>哦，好吧</h1>
-        <p>一个小更新，此个人网站已支持IE5。不信你试试。</p>
+
         <p>看样子你发现一个非常孤独的个人网站。</p>
         <p>虽然这里现在非常单调，而且只有这些。</p>
         <p>但是你知道的，个人网站也是有特别之处的。</p>
         <p>那么你们就当这是一个新的、每个人都能进入的小房子。哦，对了，这是我第1个网站</p>
+        
+        <!-- 这是你刚加的新内容 -->
+        <p>这次有一个小更新，这个网站现在有两个语言模式，一个是中文一个是英文。说实话，我以后还打算更新这个网页。虽然估计又是漫长的时间...</p>
+        <p>看到这里的人，祝你们每天开心！ ( ^ v ^ )</p>
+        
         <p>:)</p>
     </div>
 
-    <!-- 英文内容区域 (一开始是隐藏的) -->
+    <!-- 英文内容区域 -->
     <div id="english-content">
         <h1>Oh, alright.</h1>
-        <p>A small update: This website now supports IE5. Try it if you don't believe it.</p>
+
         <p>Looks like you've found a very lonely personal website.</p>
         <p>Although it is very plain right now, and has nothing but these words.</p>
         <p>But you know, personal websites have their own special charm.</p>
         <p>So just treat it as a new, little house that everyone can enter. Oh, right, this is my first website.</p>
+        
+        <!-- 这是上面那段中文的英文翻译 -->
+        <p>There's a small update: this site now has two language modes, Chinese and English. To be honest, I plan to keep updating this website in the future. Though it might take a long time...</p>
+        <p>To anyone reading this, I wish you happiness every day! ( ^ v ^ )</p>
+        
         <p>:)</p>
     </div>
 
-    <!-- 这是切换语言的魔法代码 -->
+    <!-- 切换语言的魔法代码 -->
     <script type="text/javascript">
-        // 设置一个变量，记住当前是什么语言。0代表中文，1代表英文。
         var currentLang = 0; 
 
         function switchLanguage() {
-            // 找到网页里的那两个大盒子
             var chineseBox = document.getElementById("chinese-content");
             var englishBox = document.getElementById("english-content");
             
-            // 判断当前如果是中文(0)
             if (currentLang == 0) {
-                // 把中文藏起来，把英文拿出来
                 chineseBox.style.display = "none";
                 englishBox.style.display = "block";
-                currentLang = 1; // 记住现在变成英文了
+                currentLang = 1; 
             } else {
-                // 如果当前是英文(1)，就把英文藏起来，把中文拿出来
                 englishBox.style.display = "none";
                 chineseBox.style.display = "block";
-                currentLang = 0; // 记住现在变回中文了
+                currentLang = 0; 
             }
         }
     </script>
